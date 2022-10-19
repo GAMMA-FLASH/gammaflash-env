@@ -1,7 +1,7 @@
 # gammaflash-env
 gammaflash-env
 
-## Install the environment
+## Install and run the environment
 
 1. Install python3 (current supported version 3.8.8)
 
@@ -15,4 +15,10 @@ python3 -m venv /path/to/new/virtual/environment
 
 ```
 pip install -r requirements.txt
+```
+
+4. Run the activate script
+
+```
+source /path/to/new/virtual/environment/bin/activate
 ```
