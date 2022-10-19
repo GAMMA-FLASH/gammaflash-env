@@ -14,7 +14,7 @@ python3 -m venv /path/to/new/virtual/environment
 3. Install requirements
 
 ```
-pip install -r requirements.txt
+pip install -r venv/requirements.txt
 ```
 
 4. Run the activate script
