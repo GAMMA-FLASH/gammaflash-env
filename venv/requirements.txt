@@ -11,7 +11,7 @@ click==8.0.1
 coverage==5.5
 cryptography==35.0.0
 cycler==0.10.0
-dash==2.0.0
+dash==2.6.2
 dash-bootstrap-components==0.13.0
 dash-core-components==2.0.0
 dash-html-components==2.0.0
@@ -24,7 +24,7 @@ future==0.18.2
 gunicorn==20.1.0
 h5py==3.7.0
 hurry.filesize==0.9
-influxdb-client==1.24.0
+imageio==2.22.4
 iniconfig==1.1.1
 itsdangerous==2.0.1
 Jinja2==3.0.1
@@ -34,6 +34,7 @@ lmfit==1.0.2
 MarkupSafe==2.0.1
 matplotlib==3.4.2
 mysql-connector-python==8.0.25
+networkx==2.8.8
 numexpr==2.7.3
 numpy==1.21.0
 packaging==20.9
@@ -58,11 +59,14 @@ python-dateutil==2.8.1
 python-telegram-bot==13.14
 pytz==2021.1
 pytz-deprecation-shim==0.1.0.post0
+PyWavelets==1.4.1
 Rx==3.2.0
+scikit-image==0.19.3
 scipy==1.7.0
 six==1.16.0
 tables==3.6.1
 tenacity==8.0.1
+tifffile==2022.10.10
 toml==0.10.2
 tornado==6.1
 tqdm==4.61.2
