@@ -1,0 +1,9 @@
+name: gammaflash
+channels:
+  - conda-forge
+  - https://conda.anaconda.org/conda-forge/linux-64
+  - defaults
+dependencies:
+  - python=3.8.16
+  - root=6.26.4
+  - root_base=6.26.4
