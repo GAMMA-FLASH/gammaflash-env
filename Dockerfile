@@ -39,7 +39,9 @@ USER usergamma
 
 RUN export PATH=$PATH:/opt/conda/bin && conda config --append channels conda-forge && conda config --set channel_priority strict &&  conda env create -n gammaflash -f /gammaflash/gammaflash-env/conda/environment.yml
 
-RUN export PATH=$PATH:/opt/conda/bin && source activate gammaflash && cd /gammaflash/gammaflash-env/venv && pip install -e .
+RUN export PATH=$PATH:/opt/conda/bin && source activate gammaflash && cd /gammaflash/gammaflash-env/venv && pip3 install -r requirements.txt
+
+RUN conda install -y root root_base
 
 USER root
 RUN  mkdir /shared_dir

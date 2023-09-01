@@ -5,5 +5,3 @@ channels:
   - defaults
 dependencies:
   - python=3.8.16
-  - root
-  - root_base
