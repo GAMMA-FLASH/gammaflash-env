@@ -22,3 +22,10 @@ pip install -r venv/requirements.txt
 ```
 source /path/to/new/virtual/environment/bin/activate
 ```
+
+=============
+Docker image
+
+docker build -t gammaflash:1.0.0 .
+
+

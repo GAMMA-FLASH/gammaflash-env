@@ -4,4 +4,11 @@ channels:
   - https://conda.anaconda.org/conda-forge/linux-64
   - defaults
 dependencies:
-  - python=3.8.16
+  - root
+  - root_base
+  - numpy
+  - pandas
+  - seaborn
+  - h5py
+  - tables
+
