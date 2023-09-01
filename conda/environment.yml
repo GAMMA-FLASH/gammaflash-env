@@ -10,5 +10,4 @@ dependencies:
   - pandas
   - seaborn
   - h5py
-  - tables
 

@@ -54,5 +54,5 @@ RUN chown -R usergamma:usergamma /data02
 #RUN chmod +x /home/usergamma/entrypoint.sh
 
 USER usergamma
-#ENV PATH $PATH:/opt/conda/bin
+ENV PATH="/opt/conda/bin:$PATH"
 #ENTRYPOINT ["bash", "/home/usergamma/entrypoint.sh"]
