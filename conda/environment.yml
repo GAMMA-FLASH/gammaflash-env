@@ -6,8 +6,6 @@ channels:
 dependencies:
   - root
   - root_base
-  - numpy
   - pandas
-  - seaborn
   - h5py
 
