@@ -8,4 +8,5 @@ dependencies:
   - root_base=6.26
   - pandas
   - h5py
+  - seaborn
 
