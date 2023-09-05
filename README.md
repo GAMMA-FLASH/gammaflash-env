@@ -28,12 +28,12 @@ Docker image
 
 docker system prune
 
-docker build -t gammaflash:1.1.0 .
+docker build -t gammaflash:1.2.0 .
 
-./bootstrap.sh gammaflash:1.1.0 agileobs
+./bootstrap.sh gammaflash:1.2.0 agileobs
 
-docker run -it -d -v /home/agileobs/gammaflash/:/home/usergamma/workspace -v /data02/:/data02/  -p 8001:8001 --name gf110 gammaflash:1.1.0_agileobs /bin/bash
+docker run -it -d -v /home/agileobs/gammaflash/:/home/usergamma/workspace -v /data02/:/data02/  -p 8001:8001 --name gf gammaflash:1.2.0_agileobs /bin/bash
 
-nohup jupyter-lab --ip="*" --port 8001 --no-browser --autoreload --NotebookApp.token='gf110#'  --notebook-dir=/home/usergamma/workspace --allow-root > jupyterlab_start.log 2>&1 &
+nohup jupyter-lab --ip="*" --port 8001 --no-browser --autoreload --NotebookApp.token='gf2023#'  --notebook-dir=/home/usergamma/workspace --allow-root > jupyterlab_start.log 2>&1 &
 
 

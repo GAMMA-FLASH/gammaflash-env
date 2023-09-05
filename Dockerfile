@@ -48,8 +48,8 @@ RUN  mkdir /data01
 RUN chown -R usergamma:usergamma /data01
 RUN  mkdir /data02
 RUN chown -R usergamma:usergamma /data02
-#COPY ./entrypoint.sh /home/usergamma/entrypoint.sh
-#RUN chmod +x /home/usergamma/entrypoint.sh
+COPY ./entrypoint.sh /home/usergamma/entrypoint.sh
+RUN chmod +x /home/usergamma/entrypoint.sh
 
 USER usergamma
 RUN mkdir /home/usergamma/workspace
