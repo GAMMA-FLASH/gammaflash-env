@@ -8,7 +8,6 @@ ncurses ncurses-devel make xz libzstd libzstd-devel which rsync \
 nmap-ncat chrony
 
 RUN dnf install -y oracle-epel-release-el8
-#RUN dnf install -y python38
 RUN dnf config-manager --enable ol8_codeready_builder
 RUN dnf install -y hdf5 hdf5-devel
 
@@ -41,7 +40,6 @@ RUN export PATH=$PATH:/opt/conda/bin && conda config --append channels conda-for
 
 RUN export PATH=$PATH:/opt/conda/bin && source activate gammaflash && cd /gammaflash/gammaflash-env/venv && pip3 install -r requirements.txt
 
-#RUN export PATH=$PATH:/opt/conda/bin && source activate gammaflash && conda config --set channel_priority strict && conda install -y root root_base
 
 USER root
 RUN  mkdir /shared_dir
@@ -54,5 +52,6 @@ RUN chown -R usergamma:usergamma /data02
 #RUN chmod +x /home/usergamma/entrypoint.sh
 
 USER usergamma
+RUN mkdir /home/usergamma/workspace
 ENV PATH="/opt/conda/bin:$PATH"
 #ENTRYPOINT ["bash", "/home/usergamma/entrypoint.sh"]
