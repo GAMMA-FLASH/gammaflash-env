@@ -34,6 +34,10 @@ docker build -t gammaflash:1.2.0 .
 
 docker run -it -d -v /home/agileobs/gammaflash/:/home/usergamma/workspace -v /data02/:/data02/  -p 8001:8001 --name gf gammaflash:1.2.0_agileobs /bin/bash
 
+docker exec -it gf /bin/bash
+cd
+. entrypoint.sh
+
 nohup jupyter-lab --ip="*" --port 8001 --no-browser --autoreload --NotebookApp.token='gf2023#'  --notebook-dir=/home/usergamma/workspace --allow-root > jupyterlab_start.log 2>&1 &
 
 
