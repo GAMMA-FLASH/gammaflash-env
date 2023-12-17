@@ -1,4 +1,4 @@
-FROM amd64/oraclelinux:8 AS oracle8
+FROM oraclelinux:8 AS oracle8
 
 # ---------------------------------- Installing dependencies as root ---------------------------------- 
 RUN dnf install -y epel-release git cmake3 gcc-c++ gcc binutils \
@@ -22,17 +22,18 @@ SHELL ["/bin/bash", "--login", "-c"]
 user root 
 
 #AMD64
-COPY ./Anaconda3-2023.07-2-Linux-x86_64.sh .
+#COPY ./Anaconda3-2023.07-2-Linux-x86_64.sh .
 #RUN wget https://repo.anaconda.com/archive/Anaconda3-2023.07-2-Linux-x86_64.sh 
-RUN chmod +x Anaconda3-2023.07-2-Linux-x86_64.sh 
-RUN ./Anaconda3-2023.07-2-Linux-x86_64.sh -b -p /opt/conda 
-RUN rm Anaconda3-2023.07-2-Linux-x86_64.sh
+#RUN chmod +x Anaconda3-2023.07-2-Linux-x86_64.sh 
+#RUN ./Anaconda3-2023.07-2-Linux-x86_64.sh -b -p /opt/conda 
+#RUN rm Anaconda3-2023.07-2-Linux-x86_64.sh
 
 #ARM
 #RUN wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-aarch64.sh && \
-#    chmod +x Anaconda3-2023.07-2-Linux-aarch64.sh && \
-#    ./Anaconda3-2023.07-2-Linux-aarch64.sh -b -p /opt/conda && \
-#    rm Anaconda3-2023.07-2-Linux-aarch64.sh
+COPY ./Anaconda3-2023.09-0-Linux-aarch64.sh .
+RUN chmod +x Anaconda3-2023.09-0-Linux-aarch64.sh 
+RUN ./Anaconda3-2023.09-0-Linux-aarch64.sh -b -p /opt/conda 
+RUN rm Anaconda3-2023.09-0-Linux-aarch64.sh
 
 
 WORKDIR /gammaflash

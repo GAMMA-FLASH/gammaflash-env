@@ -1,7 +1,6 @@
 name: gammaflash
 channels:
   - conda-forge
-  - https://conda.anaconda.org/conda-forge/linux-64
   - defaults
 dependencies:
   - root
