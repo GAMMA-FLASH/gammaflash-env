@@ -1,10 +1,9 @@
 tables
-waveform
 influxdb-client
 h5py
 numpy
-PyQt5
 matplotlib
 joblib
 pandas
 seaborn
+PyQt5
