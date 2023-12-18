@@ -28,6 +28,18 @@ Docker image
 
 docker system prune
 
+-----
+
+On MAC platform
+docker build --platform linux/amd64 -t gammaflash:1.5.0 -f ./Dockerfile.amd .
+docker build --platform linux/arm64 -t gammaflash:1.6.0 -f ./Dockerfile.arm .
+
+
+On Linux platform
+docker build -t gammaflash:1.5.0 -f ./Dockerfile.amd .
+
+-----
+
 docker build -t gammaflash:1.2.0 .
 
 ./bootstrap.sh gammaflash:1.2.0 agileobs
